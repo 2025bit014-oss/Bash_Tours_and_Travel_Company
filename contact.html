@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Bash Tours & Travel</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --utb-yellow: #FFCE00; 
+            --utb-black: #1a1a1a;
+            --bash-red: #d92323;
+        }
+
+        body { margin: 0; font-family: 'Inter', sans-serif; background: #fff; color: #333; }
+
+        /* HEADER & NAV */
+        header { padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; background: white; }
+        .brand-name { font-family: 'Montserrat', sans-serif; text-transform: uppercase; line-height: 1; }
+        .brand-name .top { font-size: 2.5rem; color: var(--utb-black); letter-spacing: -1px; }
+        .brand-name .bottom { font-size: 1.1rem; color: #666; letter-spacing: 3px; display: block; margin-top: 5px; }
+
+        nav {
+            background: var(--utb-black);
+            padding: 0 8%;
+            display: flex;
+            align-items: center;
+            height: 60px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a { color: white; text-decoration: none; font-weight: 600; font-size: 0.85rem; margin-right: 35px; text-transform: uppercase; }
+        nav a:hover { color: var(--utb-yellow); }
+
+        /* CONTACT LAYOUT */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            padding: 80px 8%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-info h1 { font-family: 'Montserrat', sans-serif; font-size: 3rem; text-transform: uppercase; margin-bottom: 10px; }
+        .red-line { width: 60px; height: 5px; background: var(--bash-red); margin-bottom: 30px; }
+        
+        .info-item { display: flex; align-items: center; margin-bottom: 25px; }
+        .info-item i { font-size: 1.5rem; color: var(--utb-yellow); margin-right: 20px; width: 30px; }
+        .info-item p { margin: 0; font-weight: 600; color: #555; }
+
+        /* THE FORM */
+        .contact-form {
+            background: #f9f9f9;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: 800; text-transform: uppercase; font-size: 0.75rem; margin-bottom: 8px; color: var(--utb-black); }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #eee;
+            border-radius: 5px;
+            font-family: inherit;
+            outline: none;
+        }
+        .form-group input:focus { border-color: var(--utb-yellow); }
+
+        .submit-btn {
+            background: var(--utb-black);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            width: 100%;
+            transition: 0.3s;
+        }
+        .submit-btn:hover { background: var(--bash-red); }
+
+        /* MAP PLACEHOLDER */
+        .map-section {
+            width: 100%;
+            height: 400px;
+            background: #eee;
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        footer { background: var(--utb-black); color: white; padding: 40px; text-align: center; }
+
+        @media (max-width: 900px) {
+            .contact-wrapper { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="brand-name">
+        <span class="top">BASH</span>
+        <span class="bottom">TOURS AND TRAVEL COMPANY</span>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">The Company</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="data-insights.html">Data Insights</a>
+    <a href="contact.html">Contact Us</a>
+</nav>
+
+<div class="contact-wrapper">
+    <div class="contact-info">
+        <h1>Start Your Adventure</h1>
+        <div class="red-line"></div>
+        <p>Whether you're looking for a luxury safari in Queen Elizabeth NP or a primate trek in Budongo Forest, our team is ready to plan your perfect itinerary.</p>
+        
+        <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Nakawa-Kinawataka, Kampala, Uganda</p>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <p>+256 754143594</p>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <p>Bashib1@gmail.com</p>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-clock"></i>
+            <p>Mon - Sat: 8:00 AM - 6:00 PM</p>
+        </div>
+    </div>
+
+    <div class="contact-form">
+        <form action="#">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="email@example.com" required>
+            </div>
+            <div class="form-group">
+                <label>Preferred Destination</label>
+                <input type="text" placeholder="e.g. Murchison Falls, Bwindi">
+            </div>
+            <div class="form-group">
+                <label>Your Message</label>
+                <textarea rows="5" placeholder="Tell us about your dream trip..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Inquiry</button>
+        </form>
+    </div>
+</div>
+
+<style>
+    :root {
+        --utb-yellow: #FFCE00; 
+        --utb-black: #1a1a1a;
+        --bash-red: #d92323;
+    }
+
+    body { margin: 0; font-family: 'Inter', sans-serif; background: #fff; color: #333; overflow-x: hidden; }
+
+    /* SHARED HEADER & NAV */
+    header { padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; background: white; }
+    .brand-name { font-family: 'Montserrat', sans-serif; text-transform: uppercase; line-height: 1; }
+    .brand-name .top { font-size: 2.5rem; color: var(--utb-black); letter-spacing: -1px; }
+    .brand-name .bottom { font-size: 1.1rem; color: #666; letter-spacing: 3px; display: block; margin-top: 5px; }
+
+    nav {
+        background: var(--utb-black);
+        padding: 0 8%;
+        display: flex;
+        align-items: center;
+        height: 60px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    nav a { color: white; text-decoration: none; font-weight: 600; font-size: 0.85rem; margin-right: 35px; text-transform: uppercase; }
+    nav a:hover { color: var(--utb-yellow); }
+
+    /* THE NEW UNIFORM FOOTER STYLES */
+    .main-footer { background-color: #1a1a1a; color: #ffffff; padding: 60px 8% 20px; font-size: 0.9rem; margin-top: 50px; }
+    .footer-container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; max-width: 1200px; margin: 0 auto; }
+    .footer-section { flex: 1; min-width: 250px; }
+    .footer-section h3 { color: var(--utb-yellow); text-transform: uppercase; font-family: 'Montserrat', sans-serif; font-size: 1.1rem; margin-bottom: 20px; letter-spacing: 1px; }
+    .footer-section p { line-height: 1.6; color: #cccccc; }
+    .contact-list { list-style: none; padding: 0; }
+    .contact-list li { margin-bottom: 12px; display: flex; align-items: center; }
+    .contact-list i { color: var(--utb-yellow); margin-right: 15px; width: 20px; }
+    .social-icons { display: flex; gap: 15px; margin-top: 15px; }
+    .social-icons a { color: #1a1a1a; background: #ffffff; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.3s; }
+    .social-icons a:hover { background: var(--utb-yellow); transform: translateY(-3px); }
+    .footer-bottom { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #333; font-size: 0.8rem; color: #777; }
+
+    @media (max-width: 768px) {
+        .footer-container { flex-direction: column; text-align: center; }
+        .contact-list li { justify-content: center; }
+        .social-icons { justify-content: center; }
+    }
+    
+    /* ADD YOUR SPECIFIC PAGE STYLES (GRID, CARDS, ETC.) BELOW THIS LINE */
+</style>
+
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Our Mission</h3>
+            <p>To showcase the authentic beauty of Uganda while promoting sustainable travel and professional tourism standards across the East African region.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Contact</h3>
+            <ul class="contact-list">
+                <li><i class="fas fa-map-marker-alt"></i> Nakawa-Kinawataka, Uganda</li>
+                <li><i class="fas fa-phone"></i> +256 754143594</li>
+                <li><i class="fas fa-envelope"></i> Bashib1@gmail.com</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Our Journey</h3>
+            <p>Join our community on social media for live updates from the field.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2026 Bash Tours and Travel Company. Discover with us.
+    </div>
+</footer>
+</body>
+</html>

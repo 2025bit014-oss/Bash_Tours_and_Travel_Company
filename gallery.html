@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Bash Tours & Travel</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --utb-yellow: #FFCE00; 
+            --utb-black: #1a1a1a;
+            --bash-red: #d92323; /* Added Red variable for your captions */
+        }
+
+        body { margin: 0; font-family: 'Inter', sans-serif; background: #fff; color: #333; overflow-x: hidden; }
+
+        header { padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; background: white; }
+        .brand-name { font-family: 'Montserrat', sans-serif; text-transform: uppercase; line-height: 1; }
+        .brand-name .top { font-size: 2.5rem; color: var(--utb-black); letter-spacing: -1px; }
+        .brand-name .bottom { font-size: 1.1rem; color: #666; letter-spacing: 3px; display: block; margin-top: 5px; }
+
+        nav {
+            background: var(--utb-black);
+            padding: 0 8%;
+            display: flex;
+            align-items: center;
+            height: 60px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a { color: white; text-decoration: none; font-weight: 600; font-size: 0.85rem; margin-right: 35px; text-transform: uppercase; }
+        nav a:hover { color: var(--utb-yellow); }
+
+        .section-title { text-align: center; padding: 60px 10% 20px; }
+        .section-title h1 { font-family: 'Montserrat', sans-serif; font-size: 3rem; text-transform: uppercase; margin-bottom: 10px; }
+        .yellow-line { width: 80px; height: 5px; background: var(--utb-yellow); margin: 0 auto; }
+
+        .video-container {
+            padding: 40px 8% 80px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .video-card {
+            background: #f9f9f9;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+        .video-card:hover { transform: translateY(-5px); }
+        .video-card video { width: 100%; height: 220px; object-fit: cover; background: #000; }
+        
+        .video-info { padding: 20px; }
+        .video-info h3 { 
+            font-family: 'Montserrat', sans-serif; 
+            margin: 0 0 10px; 
+            color: var(--utb-black); 
+            text-transform: uppercase;
+            font-size: 1.1rem;
+        }
+
+        /* BOLD RED CAPTIONS AS REQUESTED */
+        .video-info p { 
+            font-size: 0.95rem; 
+            color: var(--bash-red); 
+            font-weight: 700; 
+            line-height: 1.5; 
+            margin: 0; 
+        }
+
+        .photo-grid {
+            padding: 20px 8% 100px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-auto-rows: 280px;
+            gap: 15px;
+        }
+        .photo-item { position: relative; overflow: hidden; border-radius: 8px; }
+        .photo-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .photo-item:hover img { transform: scale(1.1); }
+        
+        .photo-label {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: var(--bash-red); /* Label also red to match theme */
+            color: white;
+            padding: 5px 12px;
+            font-weight: 800;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        footer { background: var(--utb-black); color: white; padding: 40px; text-align: center; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="brand-name">
+        <span class="top">BASH</span>
+        <span class="bottom">TOURS AND TRAVEL COMPANY</span>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">The Company</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="section-title">
+    <h1>Cinematic Uganda</h1>
+    <div class="yellow-line"></div>
+</div>
+
+<div class="video-container">
+    
+    <div class="video-card">
+        <video controls><source src="video/Budongo.mp4" type="video/mp4"></video>
+        <div class="video-info"><h3>Budongo</h3><p>Exploring the dense greenery of the northern woodlands.</p></div>
+    </div>
+
+    <div class="video-card">
+        <video controls><source src="video/BudongoForest.mp4" type="video/mp4"></video>
+        <div class="video-info"><h3>Budongo Forest</h3><p>A closer look at the majestic mahogany giants and primate life.</p></div>
+    </div>
+
+    <div class="video-card">
+        <video controls><source src="video/FortPortal.mp4" type="video/mp4"></video>
+        <div class="video-info"><h3>Fort Portal</h3><p>The gateway to the mountains and Uganda's tourism capital.</p></div>
+    </div>
+
+    <div class="video-card">
+        <video controls><source src="video/Kampala.mp4" type="video/mp4"></video>
+        <div class="video-info"><h3>Kampala</h3><p>The vibrant pulse of the city that never sleeps.</p></div>
+    </div>
+
+    <div class="video-card">
+        <video controls><source src="video/LakeBunyonyi.mp4" type="video/mp4"></video>
+        <div class="video-info"><h3>Lake Bunyonyi</h3><p>Serene views of the deepest lake and its 29 historic islands.</p></div>
+    </div>
+
+    <div class="video-card">
+        <video controls><source src="video/Machion.mp4" type="video/mp4"></video>
+        <div class="video-info"><h3>Murchison Falls (North)</h3><p>The power of the Nile viewed from the dramatic northern banks.</p></div>
+    </div>
+
+    <div class="video-card">
+        <video controls><source src="video/MurchionFalls.mp4" type="video/mp4"></video>
+        <div class="video-info"><h3>Murchison Falls</h3><p>Where the world's longest river bursts through a narrow rock gorge.</p></div>
+    </div>
+
+    <div class="video-card">
+        <video controls><source src="video/Murchsion.mp4" type="video/mp4"></video>
+        <div class="video-info"><h3>Murchison Landscape</h3><p>Vast savannah views where the wild meets the water.</p></div>
+    </div>
+
+    <div class="video-card">
+        <video controls><source src="video/nileview.mp4" type="video/mp4"></video>
+        <div class="video-info"><h3>Nile View</h3><p>Calm waters and breathtaking sunsets along the legendary river.</p></div>
+    </div>
+
+    <div class="video-card">
+        <video controls><source src="video/QueenElizabeth.mp4" type="video/mp4"></video>
+        <div class="video-info"><h3>Queen Elizabeth</h3><p>Home to tree-climbing lions and the scenic Kazinga channel.</p></div>
+    </div>
+
+    <div class="video-card">
+        <video controls><source src="video/Rwenzori.mp4" type="video/mp4"></video>
+        <div class="video-info"><h3>Rwenzori</h3><p>Scaling the snow-capped "Mountains of the Moon".</p></div>
+    </div>
+
+    <div class="video-card">
+        <video controls><source src="video/viewofchimpanze.mp4" type="video/mp4"></video>
+        <div class="video-info"><h3>Chimpanzee View</h3><p>An intimate encounter with our closest cousins in the wild.</p></div>
+    </div>
+
+</div>
+
+<div class="section-title">
+    <h1>Visual Collection</h1>
+    <div class="yellow-line"></div>
+</div>
+
+<div class="photo-grid">
+    <div class="photo-item">
+        <img src="images/elephants.jpeg">
+        <div class="photo-label">Elephants</div>
+    </div>
+    <div class="photo-item">
+        <img src="images/Sorceofthenile.jpg.jpeg">
+        <div class="photo-label">Source of the Nile</div>
+    </div>
+    <div class="photo-item">
+        <img src="images/lion.jpg.jpeg">
+        <div class="photo-label">Lion</div>
+    </div>
+    <div class="photo-item">
+        <img src="images/JinjaBridge.jpg.jpeg">
+        <div class="photo-label">River Nile</div>
+    </div>
+    <div class="photo-item">
+        <img src="images/chimpaze,jpg.jpeg">
+        <div class="photo-label">Chimpanzee</div>
+    </div>
+</div>
+
+<style>
+    :root {
+        --utb-yellow: #FFCE00; 
+        --utb-black: #1a1a1a;
+        --bash-red: #d92323;
+    }
+
+    body { margin: 0; font-family: 'Inter', sans-serif; background: #fff; color: #333; overflow-x: hidden; }
+
+    /* SHARED HEADER & NAV */
+    header { padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; background: white; }
+    .brand-name { font-family: 'Montserrat', sans-serif; text-transform: uppercase; line-height: 1; }
+    .brand-name .top { font-size: 2.5rem; color: var(--utb-black); letter-spacing: -1px; }
+    .brand-name .bottom { font-size: 1.1rem; color: #666; letter-spacing: 3px; display: block; margin-top: 5px; }
+
+    nav {
+        background: var(--utb-black);
+        padding: 0 8%;
+        display: flex;
+        align-items: center;
+        height: 60px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    nav a { color: white; text-decoration: none; font-weight: 600; font-size: 0.85rem; margin-right: 35px; text-transform: uppercase; }
+    nav a:hover { color: var(--utb-yellow); }
+
+    /* THE NEW UNIFORM FOOTER STYLES */
+    .main-footer { background-color: #1a1a1a; color: #ffffff; padding: 60px 8% 20px; font-size: 0.9rem; margin-top: 50px; }
+    .footer-container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; max-width: 1200px; margin: 0 auto; }
+    .footer-section { flex: 1; min-width: 250px; }
+    .footer-section h3 { color: var(--utb-yellow); text-transform: uppercase; font-family: 'Montserrat', sans-serif; font-size: 1.1rem; margin-bottom: 20px; letter-spacing: 1px; }
+    .footer-section p { line-height: 1.6; color: #cccccc; }
+    .contact-list { list-style: none; padding: 0; }
+    .contact-list li { margin-bottom: 12px; display: flex; align-items: center; }
+    .contact-list i { color: var(--utb-yellow); margin-right: 15px; width: 20px; }
+    .social-icons { display: flex; gap: 15px; margin-top: 15px; }
+    .social-icons a { color: #1a1a1a; background: #ffffff; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.3s; }
+    .social-icons a:hover { background: var(--utb-yellow); transform: translateY(-3px); }
+    .footer-bottom { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #333; font-size: 0.8rem; color: #777; }
+
+    @media (max-width: 768px) {
+        .footer-container { flex-direction: column; text-align: center; }
+        .contact-list li { justify-content: center; }
+        .social-icons { justify-content: center; }
+    }
+    
+    /* ADD YOUR SPECIFIC PAGE STYLES (GRID, CARDS, ETC.) BELOW THIS LINE */
+</style>
+
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Our Mission</h3>
+            <p>To showcase the authentic beauty of Uganda while promoting sustainable travel and professional tourism standards across the East African region.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Contact</h3>
+            <ul class="contact-list">
+                <li><i class="fas fa-map-marker-alt"></i> Nakawa-Kinawataka, Uganda</li>
+                <li><i class="fas fa-phone"></i> +256 754143594</li>
+                <li><i class="fas fa-envelope"></i> Bashib1@gmail.com</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Our Journey</h3>
+            <p>Join our community on social media for live updates from the field.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2026 Bash Tours and Travel Company. Discover with Us.
+    </div>
+</footer>
+</body>
+</html>

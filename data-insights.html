@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Insights | Bash Tours & Travel</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --utb-yellow: #FFCE00; 
+            --utb-black: #1a1a1a;
+            --bash-red: #d92323;
+            --soft-bg: #f4f4f4;
+        }
+
+        body { margin: 0; font-family: 'Inter', sans-serif; background: var(--soft-bg); color: #333; }
+
+        /* HEADER & NAV */
+        header { padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; background: white; border-bottom: 3px solid var(--utb-yellow); }
+        .brand-name { font-family: 'Montserrat', sans-serif; text-transform: uppercase; line-height: 1; }
+        .brand-name .top { font-size: 2.5rem; color: var(--utb-black); letter-spacing: -1px; }
+        .brand-name .bottom { font-size: 1.1rem; color: #666; letter-spacing: 3px; display: block; margin-top: 5px; }
+
+        nav {
+            background: var(--utb-black);
+            padding: 0 8%;
+            display: flex;
+            align-items: center;
+            height: 60px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a { color: white; text-decoration: none; font-weight: 600; font-size: 0.85rem; margin-right: 35px; text-transform: uppercase; }
+        nav a:hover { color: var(--utb-yellow); }
+
+        /* SEARCH SECTION (Inspired by Parliament Site) */
+        .search-hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1516422317184-268a2455ed2e?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            padding: 80px 10%;
+            color: white;
+            text-align: center;
+        }
+        .search-hero h1 { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; margin-bottom: 20px; text-transform: uppercase; }
+        .search-box {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            background: white;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .search-box input {
+            flex: 1;
+            border: none;
+            padding: 15px;
+            outline: none;
+            font-size: 1rem;
+        }
+        .search-box button {
+            background: var(--utb-yellow);
+            border: none;
+            padding: 0 30px;
+            font-weight: 900;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        /* DATA CARDS */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 60px 8%;
+        }
+        .stat-card {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--bash-red); /* Using your red here */
+        }
+        .stat-card h2 { font-size: 3rem; margin: 0; color: var(--utb-black); }
+        .stat-card p { font-weight: 600; color: #777; text-transform: uppercase; font-size: 0.9rem; }
+
+        /* ANALYTICS SECTION */
+        .analytics-content {
+            padding: 0 8% 80px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+        .info-panel {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+        }
+        .info-panel h3 { font-family: 'Montserrat', sans-serif; border-bottom: 2px solid var(--utb-yellow); padding-bottom: 10px; }
+        .info-panel p { line-height: 1.8; color: #555; }
+        
+        .side-panel {
+            background: var(--utb-black);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+        }
+        .side-panel h4 { color: var(--utb-yellow); text-transform: uppercase; margin-top: 0; }
+        .event-link {
+            display: block;
+            color: white;
+            padding: 10px 0;
+            border-bottom: 1px solid #333;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .event-link:hover { color: var(--utb-yellow); }
+
+        footer { background: var(--utb-black); color: white; padding: 40px; text-align: center; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="brand-name">
+        <span class="top">BASH</span>
+        <span class="bottom">TOURS AND TRAVEL</span>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">The Company</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="data-insights.html">Data Insights</a>
+    <a href="contact.html">Contact Us</a>
+</nav>
+
+<section class="search-hero">
+    <h1>Tourism Research & Data</h1>
+    <div class="search-box">
+        <input type="text" placeholder="Search for species, parks, or trek data...">
+        <button>Search</button>
+    </div>
+</section>
+
+<div class="stats-grid">
+    <div class="stat-card">
+        <h2>1,063</h2>
+        <p>Mountain Gorillas in the Wild</p>
+    </div>
+    <div class="stat-card">
+        <h2>1,000+</h2>
+        <p>Bird Species Recorded</p>
+    </div>
+    <div class="stat-card">
+        <h2>10</h2>
+        <p>National Parks Managed</p>
+    </div>
+    <div class="stat-card">
+        <h2>$1.6B</h2>
+        <p>Annual Tourism Contribution</p>
+    </div>
+</div>
+
+<div class="analytics-content">
+    <div class="info-panel">
+        <h3>Conservation Insights</h3>
+        <p>At Bash Tours & Travel, we don't just guide safaris; we monitor the health of our ecosystems. Our data insights show a steady 3% growth in the Chimpanzee populations of Budongo Forest over the last five years. This research helps us tailor our tours to be as low-impact and high-value as possible for both the traveler and the environment.</p>
+        <p>Using professional mapping and data tracking, we provide our clients with the most accurate times for wildlife sightings in Queen Elizabeth and Murchison Falls.</p>
+    </div>
+
+    <div class="side-panel">
+        <h4>Recent Updates</h4>
+        <a href="#" class="event-link">Gorilla Census 2026 Results ></a>
+        <a href="#" class="event-link">New Trekking Routes in Rwenzori ></a>
+        <a href="#" class="event-link">Nile Level Impact Report ></a>
+        <a href="#" class="event-link">Sustainable Travel Guide 2026 ></a>
+    </div>
+</div>
+<style>
+    :root {
+        --utb-yellow: #FFCE00; 
+        --utb-black: #1a1a1a;
+        --bash-red: #d92323;
+    }
+
+    body { margin: 0; font-family: 'Inter', sans-serif; background: #fff; color: #333; overflow-x: hidden; }
+
+    /* SHARED HEADER & NAV */
+    header { padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; background: white; }
+    .brand-name { font-family: 'Montserrat', sans-serif; text-transform: uppercase; line-height: 1; }
+    .brand-name .top { font-size: 2.5rem; color: var(--utb-black); letter-spacing: -1px; }
+    .brand-name .bottom { font-size: 1.1rem; color: #666; letter-spacing: 3px; display: block; margin-top: 5px; }
+
+    nav {
+        background: var(--utb-black);
+        padding: 0 8%;
+        display: flex;
+        align-items: center;
+        height: 60px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    nav a { color: white; text-decoration: none; font-weight: 600; font-size: 0.85rem; margin-right: 35px; text-transform: uppercase; }
+    nav a:hover { color: var(--utb-yellow); }
+
+    /* THE NEW UNIFORM FOOTER STYLES */
+    .main-footer { background-color: #1a1a1a; color: #ffffff; padding: 60px 8% 20px; font-size: 0.9rem; margin-top: 50px; }
+    .footer-container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; max-width: 1200px; margin: 0 auto; }
+    .footer-section { flex: 1; min-width: 250px; }
+    .footer-section h3 { color: var(--utb-yellow); text-transform: uppercase; font-family: 'Montserrat', sans-serif; font-size: 1.1rem; margin-bottom: 20px; letter-spacing: 1px; }
+    .footer-section p { line-height: 1.6; color: #cccccc; }
+    .contact-list { list-style: none; padding: 0; }
+    .contact-list li { margin-bottom: 12px; display: flex; align-items: center; }
+    .contact-list i { color: var(--utb-yellow); margin-right: 15px; width: 20px; }
+    .social-icons { display: flex; gap: 15px; margin-top: 15px; }
+    .social-icons a { color: #1a1a1a; background: #ffffff; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.3s; }
+    .social-icons a:hover { background: var(--utb-yellow); transform: translateY(-3px); }
+    .footer-bottom { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #333; font-size: 0.8rem; color: #777; }
+
+    @media (max-width: 768px) {
+        .footer-container { flex-direction: column; text-align: center; }
+        .contact-list li { justify-content: center; }
+        .social-icons { justify-content: center; }
+    }
+    
+    /* ADD YOUR SPECIFIC PAGE STYLES (GRID, CARDS, ETC.) BELOW THIS LINE */
+</style>
+
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Our Mission</h3>
+            <p>To showcase the authentic beauty of Uganda while promoting sustainable travel and professional tourism standards across the East African region.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Contact</h3>
+            <ul class="contact-list">
+                <li><i class="fas fa-map-marker-alt"></i> Nakawa-Kinawataka, Uganda</li>
+                <li><i class="fas fa-phone"></i> +256 754143594</li>
+                <li><i class="fas fa-envelope"></i> Bashib1@gmail.com</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Our Journey</h3>
+            <p>Join our community on social media for live updates from the field.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2026 Bash Tours and Travel Company. Discover with us.
+    </div>
+</footer>
+</body>
+</html>
