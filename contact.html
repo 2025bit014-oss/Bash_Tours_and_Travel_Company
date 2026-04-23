@@ -150,28 +150,25 @@
     </div>
 
     <div class="contact-form">
-    <form action="mailto:bashtoursandtravelcompany@gmail.com?subject=Tour Booking Inquiry" method="post" enctype="text/plain">
-    
+   <form action="https://formspree.io/f/mzdyklja" method="POST">
     <div class="form-group">
         <label>FULL NAME</label>
         <input type="text" name="Name" placeholder="Enter your name" required>
     </div>
-
     <div class="form-group">
         <label>EMAIL ADDRESS</label>
         <input type="email" name="Email" placeholder="email@example.com" required>
     </div>
-
     <div class="form-group">
-        <label>PREFERRED DESTINATION</label>
-        <input type="text" name="Destination" placeholder="e.g. Murchison Falls">
+        <label>SUBJECT</label>
+        <input type="text" name="Subject" value="Tour Booking Inquiry">
     </div>
-
     <div class="form-group">
         <label>YOUR MESSAGE</label>
-        <textarea name="Message" placeholder="Tell us about your trip..."></textarea>
+        <textarea name="Message" placeholder="I would like to book..."></textarea>
     </div>
-
+    <input type="hidden" name="_next" value="https://2025bit014-oss.github.io/Bash_Tours_and_Travel_Company/contact.html">
+    
     <button type="submit" class="submit-btn">SEND INQUIRY</button>
 </form>
     </div>
